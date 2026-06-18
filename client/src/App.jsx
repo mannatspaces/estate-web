@@ -17,7 +17,7 @@ import api, { setAuthToken } from './api/api';
 
 function PrivateRoute({ isAuthenticated, children }) {
   if (!isAuthenticated) {
-    return <Navigate to="/admin-login" replace />;
+    return <Navigate to="/mannat-admin-panel" replace />;
   }
   return children;
 }
@@ -135,7 +135,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-midnight text-slate-50">
+    <div className="min-h-screen bg-midnight text-slate-900">
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
@@ -177,22 +177,26 @@ function App() {
             <Route path="/property/:id" element={<PropertyDetailsPage properties={properties} favorites={favorites} toggleFavorite={toggleFavorite} />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/auth" element={<AuthPage />} />
             <Route
-                    path="/admin"
-             element={
-                <PrivateRoute isAuthenticated={isAdminAuthenticated}>
-                  <AdminDashboard
-                    properties={properties}
-                    contacts={contacts}
-                    addProperty={addProperty}
-                    updateProperty={updateProperty}
-                    deleteProperty={deleteProperty}
-                    onLogout={handleAdminLogout}
-                  />
-                </PrivateRoute>
-              }
-            />
+  path="/mannat-admin-panel"
+  element={<AdminLoginPage onAdminLogin={handleAdminLogin} />}
+/>
+
+    <Route
+  path="/admin"
+  element={
+    <PrivateRoute isAuthenticated={isAdminAuthenticated}>
+      <AdminDashboard
+        properties={properties}
+        contacts={contacts}
+        addProperty={addProperty}
+        updateProperty={updateProperty}
+              deleteProperty={deleteProperty}
+              onLogout={handleAdminLogout}
+           />
+           </PrivateRoute>
+            }
+          />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </motion.main>

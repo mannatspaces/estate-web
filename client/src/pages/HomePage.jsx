@@ -18,19 +18,19 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
 
   return (
     <section className="overflow-hidden">
-      <div className="relative bg-[radial-gradient(circle_at_top,_rgba(94,152,255,0.24),_transparent_30%),linear-gradient(135deg,#08162f_0%,#071b35_100%)] px-5 pb-20 pt-12 sm:px-8 lg:px-12">
+<div className="relative bg-gradient-to-b from-slate-50 via-white to-blue-50 px-5 pb-20 pt-12 sm:px-8 lg:px-12">
         <div className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top_left,_rgba(94,152,255,0.18),_transparent_28%)]" />
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="space-y-6">
               <span className="section-heading">MannatSpaces</span>
-              <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl">Discover premium properties with a futuristic glass experience.</h1>
-              <p className="max-w-2xl text-slate-300">Find the most exclusive homes, branded commercial towers, and investment plots with intelligent search and cutting-edge visuals.</p>
+              <h1 className="max-w-3xl text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">Discover premium properties with a futuristic glass experience.</h1>
+             <p className="max-w-2xl text-slate-600">Find the most exclusive homes, branded commercial towers, and investment plots with intelligent search and cutting-edge visuals.</p>
               <div className="grid gap-4 sm:grid-cols-[1.3fr_0.7fr]">
                 <Link to="/listings" className="rounded-3xl bg-accent px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-accent2">
                   Explore Listings
                 </Link>
-                <a href="tel:+919876543210" className="rounded-3xl border border-white/10 bg-white/5 px-6 py-4 text-sm font-semibold text-white transition hover:border-accent">
+                <a href="tel:+918251096645" className="rounded-3xl border border-white/10 bg-white/5 px-6 py-4 text-sm font-semibold text-slate-900 transition hover:border-accent">
                   Call Agent
                 </a>
               </div>
@@ -39,9 +39,9 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.75 }} className="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-6 shadow-glass backdrop-blur-xl">
               <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(94,152,255,0.16),transparent_50%)]" />
               <div className="relative space-y-4">
-                <div className="rounded-3xl bg-slate-950/95 p-5">
-                  <h2 className="text-lg font-semibold text-white">Premium property search</h2>
-                  <p className="mt-2 text-sm text-slate-400">Use smart filters, compare featured properties, and find the perfect address instantly.</p>
+                <div className="rounded-3xl bg-blue-50 p-5">
+                  <h2 className="text-lg font-semibold text-slate-900">Premium property search</h2>
+                  <p className="mt-2 text-sm text-slate-600">Use smart filters, compare featured properties, and find the perfect address instantly.</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3">
                   {tabOptions.map((tab) => (
@@ -66,7 +66,7 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
                     <select
                       value={filters.type}
                       onChange={(e) => setFilters((prev) => ({ ...prev, type: e.target.value }))}
-                      className="rounded-3xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white outline-none"
+                      className="rounded-3xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none"
                     >
                       <option value="">Type</option>
                       <option value="Residential">Residential</option>
@@ -184,7 +184,7 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
                   <a href="https://wa.me/918251096645" target="_blank" rel="noreferrer" className="rounded-3xl bg-green-500 px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-green-400">
                     Chat on WhatsApp
                   </a>
-                  <a href="tel:+919876543210" className="rounded-3xl border border-white/10 px-6 py-4 text-sm font-semibold text-white transition hover:border-accent">
+                  <a href="tel:+918251096645" className="rounded-3xl border border-white/10 px-6 py-4 text-sm font-semibold text-white transition hover:border-accent">
                     Call now
                   </a>
                 </div>

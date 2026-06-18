@@ -7,11 +7,12 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif']
       },
         colors: {
-        midnight: '#fafaf9',
-        horizon: '#ffffff',
-        glow: '#f3f4f6',
-        accent: '#c9a227',
-        accent2: '#d4af37'
+          midnight: '#f8fafc',
+          horizon: '#ffffff',
+          glow: '#e2e8f0',
+          glass: '#ffffff',
+         accent: '#2563eb',
+         accent2: '#3b82f6'
       },
       boxShadow: {
         glass: '0 24px 80px rgba(2, 15, 45, 0.22)'
