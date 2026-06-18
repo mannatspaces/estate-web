@@ -1,13 +1,34 @@
-# MannatSpaces - Property Dealing Platform 🏢
+# MannatSpaces - Premium Real Estate Platform 🏙️
 
-## ✨ Tagline
-**"Har Mannat Ka Perfect Address"**
+## 🚀 Project Overview
+MannatSpaces is now scaffolded as a modern React + Tailwind frontend with a Node.js + Express backend and MongoDB-ready data models. The website is designed around a luxury dark blue glassmorphism aesthetic, fully responsive layouts, animated hover states, advanced filters, and SEO-friendly structure.
 
-## 📝 Brand Description
-MannatSpaces is a trusted platform for residential and commercial property solutions, connecting dreams with the right address.
+## 🧱 Project Structure
+- `client/` — React + Vite + Tailwind frontend
+- `server/` — Express backend with MongoDB models and auth routes
+- `.gitignore` — ignores node_modules and environment files
 
-### Brand Line
-Residential • Commercial • Investment
+## 🏁 Quick Start
+1. Install frontend dependencies:
+   ```bash
+   cd client
+   npm install
+   ```
+2. Install backend dependencies:
+   ```bash
+   cd ../server
+   npm install
+   ```
+3. Start the frontend and backend locally:
+   ```bash
+   cd ../client
+   npm run dev
+   ```
+   ```bash
+   cd ../server
+   npm run dev
+   ```
+4. Copy `.env.example` to `.env` in `server/` and configure `MONGODB_URI` and `JWT_SECRET`.
 
 ---
 
@@ -15,16 +36,14 @@ Residential • Commercial • Investment
 
 ### 👥 Public Features
 - 🏘️ **Browse Properties**: View all listed properties with detailed information
-- 🔍 **Search & Filter**: Search by property name/location and filter by type (Residential/Commercial/Investment)
+- 🔍 **Search & Filter**: Search by property name/location and filter by type, budget, or neighborhood
 - 📋 **Property Details**: Click on any property to view complete details including price, area, description
 - 📱 **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 
 ### 👨‍💼 Admin Features
-- 🔐 **Secure Login**: Admin panel with password protection
-- ➕ **Add Properties**: Add new properties with all details (name, location, type, price, area, description, image URL)
-- ✏️ **Edit Properties**: Modify existing property details
-- 🗑️ **Delete Properties**: Remove properties from the platform
-- 📊 **Property Management**: View and manage all properties from a single dashboard
+- 🔐 **Admin Dashboard**: Manage listings from a secure panel
+- ➕ **Add Properties**: Create new property cards with price, area, type, location, and agent details
+- 📊 **Portfolio Summary**: View total properties and portfolio value
 
 ---
 
