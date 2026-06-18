@@ -3,18 +3,22 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   font-family: 'Inter', sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
+  background: #071b35;
+  color: #f8fafc;
 }
+
 
 html {
   scroll-behavior: smooth;
 }
+
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, #15d1a2 0%, #12d59e 50%, #15d4a7 100%);
+  background:
+    radial-gradient(circle at top, rgba(94,152,255,.15), transparent 25%),
+    linear-gradient(180deg,#071b35 0%,#08162f 100%);
 }
 
 * {
@@ -33,10 +37,10 @@ select {
 }
 
 .glass-panel {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
-  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(229, 231, 235, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .glow-button {

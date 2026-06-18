@@ -18,7 +18,7 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
 
   return (
     <section className="overflow-hidden">
-<div className="relative bg-gradient-to-b from-slate-50 via-white to-blue-50 px-5 pb-20 pt-12 sm:px-8 lg:px-12">
+<div className="relative bg-[radial-gradient(circle_at_top,_rgba(94,152,255,0.24),_transparent_30%),linear-gradient(135deg,#08162f_0%,#071b35_100%)] px-5 pb-20 pt-12 sm:px-8 lg:px-12">
         <div className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top_left,_rgba(94,152,255,0.18),_transparent_28%)]" />
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
