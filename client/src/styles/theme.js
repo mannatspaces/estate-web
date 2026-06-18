@@ -1,9 +1,9 @@
 export const theme = {
   colors: {
-    background: '#071b35',
+    background: '#1cdbb2',
     surface: 'rgba(255,255,255,0.08)',
     surfaceStrong: 'rgba(255,255,255,0.12)',
-    textPrimary: '#f8fafc',
+    textPrimary: '#000204',
     textSecondary: '#cbd5e1',
     accent: '#5e98ff',
     accentLight: '#84d4ff',
