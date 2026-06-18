@@ -178,10 +178,9 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/auth" element={<AuthPage />} />
-            <Route path="/mannat-admin-panel" element={<AdminLoginPage onAdminLogin={handleAdminLogin} />} />
-            <Route path="/mannat-admin-panel"
-              path="/admin"
-              element={
+            <Route
+                    path="/admin"
+             element={
                 <PrivateRoute isAuthenticated={isAdminAuthenticated}>
                   <AdminDashboard
                     properties={properties}
