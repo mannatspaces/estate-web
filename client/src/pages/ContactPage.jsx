@@ -48,11 +48,11 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
     <div className="glass-panel rounded-[32px] p-10">
       <span className="section-heading">Contact</span>
 
-      <h1 className="mt-4 text-4xl font-semibold text-white">
+      <h1 className="mt-4 text-4xl font-semibold text-slate-900">
         Start your property journey today.
       </h1>
 
-      <p className="mt-4 text-slate-300 leading-relaxed">
+      <p className="mt-4 text-slate-600 leading-relaxed">
         Reach out with your budget and preferred neighborhood, and our expert team will personalize the best premium options for your next address.
       </p>
 
@@ -63,21 +63,21 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
           <p className="mt-2 text-lg font-semibold text-white">
             Mannat Spaces
           </p>
-          <p className="mt-1 text-slate-300">
+          <p className="mt-1 text-slate-600">
             Shivpuri Road, Pichhore, Adarsh Colony
           </p>
         </div>
 
         <div className="rounded-3xl bg-slate-950/80 p-6">
           <p className="text-sm text-slate-400">Email</p>
-          <p className="mt-2 text-lg text-white">
+          <p className="mt-2 text-lg text-slate-900">
             info@mannatspaces.in
           </p>
         </div>
 
         <div className="rounded-3xl bg-slate-950/80 p-6">
           <p className="text-sm text-slate-400">Phone</p>
-          <p className="mt-2 text-lg text-white">
+          <p className="mt-2 text-lg text-slate-900">
             +91 89826 52658
           </p>
         </div>
@@ -103,7 +103,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             onChange={handleChange}
             placeholder="Your Name"
             required
-            className="mt-3 w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none"
+            className="mt-3 w-full rounded-3xl border border-white/10 bg-white border border-slate-200 px-4 py-3 text-slate-900 outline-none"
           />
         </div>
 
@@ -119,7 +119,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             onChange={handleChange}
             placeholder="you@example.com"
             required
-            className="mt-3 w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none"
+            className="mt-3 w-full rounded-3xl border border-white/10 bg-white border border-slate-200 px-4 py-3 text-slate-900 outline-none"
           />
         </div>
 
@@ -134,7 +134,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             value={formData.phone}
             onChange={handleChange}
             placeholder="Enter Phone Number"
-            className="mt-3 w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none"
+            className="mt-3 w-full rounded-3xl border border-white/10 bg-white border border-slate-200 px-4 py-3 text-slate-900 outline-none"
           />
         </div>
 
@@ -149,7 +149,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             onChange={handleChange}
             required
             placeholder="Tell us what you need..."
-            className="mt-3 min-h-[180px] w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-4 text-white outline-none"
+            className="mt-3 min-h-[180px] w-full rounded-3xl border border-white/10bg-white border border-slate-200 px-4 py-4 text-slate-900 outline-none"
           />
         </div>
 
