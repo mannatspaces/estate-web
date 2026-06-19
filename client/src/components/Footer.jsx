@@ -18,10 +18,10 @@ function Footer() {
           <div>
             <p className="mb-4 text-sm uppercase tracking-[0.28em] text-slate-500">Explore</p>
             <div className="space-y-3 text-sm">
-              <Link to="/" className="block hover:text-white">Home</Link>
-              <Link to="/listings" className="block hover:text-white">Listings</Link>
-              <Link to="/about" className="block hover:text-white">About</Link>
-              <Link to="/contact" className="block hover:text-white">Contact</Link>
+              <Link to="/" className="block hover:text-blue-600">Home</Link>
+              <Link to="/listings" className="block hover:text-blue-600">Listings</Link>
+              <Link to="/about" className="block hover:text-blue-600">About</Link>
+              <Link to="/contact" className="block hover:text-blue-600">Contact</Link>
             </div>
           </div>
           <div>
