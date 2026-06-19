@@ -135,7 +135,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-midnight text-slate-900">
+   <div className="min-h-screen bg-midnight text-white">
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
