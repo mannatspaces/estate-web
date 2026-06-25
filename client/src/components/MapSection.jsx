@@ -6,9 +6,9 @@ function MapSection({ location }) {
     : `https://maps.google.com/maps?q=${query}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <div className="glass-panel rounded-[32px] p-8">
+    <div className="glass-panel rounded-2xl p-8">
       <span className="section-heading">Location Preview</span>
-      <div className="mt-6 h-96 overflow-hidden rounded-3xl border border-white/10">
+      <div className="mt-6 h-96 overflow-hidden rounded-xl border border-slate-700">
         <iframe
           title="Property location"
           src={src}

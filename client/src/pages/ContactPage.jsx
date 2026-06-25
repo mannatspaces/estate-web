@@ -45,10 +45,10 @@ try {
 
 return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid gap-10 lg:grid-cols-[0.95fr_0.9fr]">
 
-    <div className="glass-panel rounded-[32px] p-10">
+    <div className="glass-panel rounded-2xl p-10">
       <span className="section-heading">Contact</span>
 
-      <h1 className="mt-4 text-4xl font-semibold text-slate-900">
+      <h1 className="mt-4 text-4xl font-semibold text-white">
         Start your property journey today.
       </h1>
 
@@ -58,27 +58,27 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
 
       <div className="mt-10 grid gap-4">
 
-        <div className="rounded-3xl bg-slate-950/80 p-6">
+        <div className="rounded-xl bg-slate-950 p-6">
           <p className="text-sm text-slate-400">Head Office</p>
           <p className="mt-2 text-lg font-semibold text-white">
             Mannat Spaces
           </p>
           <p className="mt-1 text-slate-600">
-            Shivpuri Road, Pichhore, Adarsh Colony
+            indore, Madhya Pradesh, India
           </p>
         </div>
 
-        <div className="rounded-3xl bg-slate-950/80 p-6">
+        <div className="rounded-xl bg-slate-950 p-6">
           <p className="text-sm text-slate-400">Email</p>
-          <p className="mt-2 text-lg text-slate-900">
-            info@mannatspaces.in
+          <p className="mt-2 text-lg text-white">
+            mannatspaces1@gmail.com
           </p>
         </div>
 
-        <div className="rounded-3xl bg-slate-950/80 p-6">
+        <div className="rounded-xl bg-slate-950 p-6">
           <p className="text-sm text-slate-400">Phone</p>
-          <p className="mt-2 text-lg text-slate-900">
-            +91 89826 52658
+          <p className="mt-2 text-lg text-white">
+            +91 82510 96645
           </p>
         </div>
 
@@ -87,7 +87,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
 
     <form
       onSubmit={handleSubmit}
-      className="glass-panel rounded-[32px] p-10"
+      className="glass-panel rounded-2xl p-10"
     >
       <div className="grid gap-6">
 
@@ -103,7 +103,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             onChange={handleChange}
             placeholder="Your Name"
             required
-            className="mt-3 w-full rounded-3xl border border-white/10 bg-white border border-slate-200 px-4 py-3 text-slate-900 outline-none"
+            className="mt-3 w-full rounded-xl border border-slate-700 bg-slate-950 border border-slate-700 px-4 py-3 text-white outline-none"
           />
         </div>
 
@@ -119,7 +119,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             onChange={handleChange}
             placeholder="you@example.com"
             required
-            className="mt-3 w-full rounded-3xl border border-white/10 bg-white border border-slate-200 px-4 py-3 text-slate-900 outline-none"
+            className="mt-3 w-full rounded-xl border border-slate-700 bg-slate-950 border border-slate-700 px-4 py-3 text-white outline-none"
           />
         </div>
 
@@ -134,7 +134,7 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             value={formData.phone}
             onChange={handleChange}
             placeholder="Enter Phone Number"
-            className="mt-3 w-full rounded-3xl border border-white/10 bg-white border border-slate-200 px-4 py-3 text-slate-900 outline-none"
+            className="mt-3 w-full rounded-xl border border-slate-700 bg-slate-950 border border-slate-700 px-4 py-3 text-white outline-none"
           />
         </div>
 
@@ -149,14 +149,14 @@ return ( <section className="mx-auto max-w-6xl px-6 py-14"> <div className="grid
             onChange={handleChange}
             required
             placeholder="Tell us what you need..."
-            className="mt-3 min-h-[180px] w-full rounded-3xl border border-white/10bg-white border border-slate-200 px-4 py-4 text-slate-900 outline-none"
+            className="mt-3 min-h-[180px] w-full rounded-xl border border-slate-700bg-slate-950 border border-slate-700 px-4 py-4 text-white outline-none"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="rounded-3xl bg-accent px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-accent2"
+          className="rounded-xl bg-accent px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-accent2"
         >
           {loading ? 'Sending...' : 'Send Message'}
         </button>

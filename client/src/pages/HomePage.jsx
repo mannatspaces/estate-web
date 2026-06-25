@@ -24,24 +24,30 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="space-y-6">
               <span className="section-heading">MannatSpaces</span>
-              <h1 className="max-w-3xl text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">Discover premium properties with a futuristic glass experience.</h1>
+              <h1 className="max-w-3xl text-4xl font-bold leading-tight text-white sm:text-5xl">Discover premium properties with a futuristic glass experience.</h1>
              <p className="max-w-2xl text-slate-600">Find the most exclusive homes, branded commercial towers, and investment plots with intelligent search and cutting-edge visuals.</p>
               <div className="grid gap-4 sm:grid-cols-[1.3fr_0.7fr]">
-                <Link to="/listings" className="rounded-3xl bg-accent px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-accent2">
-                  Explore Listings
+                <Link
+                   to="/listings"
+                    className="rounded-xl bg-blue-600 px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,.5)]"
+                  >
+                   Explore Listings
                 </Link>
-                <a href="tel:+918251096645" className="rounded-3xl border border-white/10 bg-white/5 px-6 py-4 text-sm font-semibold text-slate-900 transition hover:border-accent">
-                  Call Agent
+                <a
+                    href="tel:+918982652658"
+                   className="rounded-xl border border-slate-700 bg-slate-900 px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-blue-500 hover:bg-slate-800"
+                  >
+                 Call Agent
                 </a>
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.75 }} className="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-6 shadow-glass backdrop-blur-xl">
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.75 }} className="relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-6 shadow-glass backdrop-blur-xl">
               <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(94,152,255,0.16),transparent_50%)]" />
               <div className="relative space-y-4">
-                <div className="rounded-3xl bg-blue-50 p-5">
-                  <h2 className="text-lg font-semibold text-slate-900">Premium property search</h2>
-                  <p className="mt-2 text-sm text-slate-600">Use smart filters, compare featured properties, and find the perfect address instantly.</p>
+                <div className="rounded-2xl border border-slate-800 bg-slate-900 p-5">
+                  <h2 className="text-lg font-semibold text-white">Premium property search</h2>
+                  <p className="mt-2 text-sm text-slate-400">Use smart filters, compare featured properties, and find the perfect address instantly.</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3">
                   {tabOptions.map((tab) => (
@@ -49,24 +55,24 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
                       key={tab}
                       type="button"
                       onClick={() => setActiveTab(tab)}
-                      className={`rounded-3xl px-4 py-3 text-sm font-semibold transition ${activeTab === tab ? 'bg-accent text-slate-950 shadow-glow' : 'bg-white/5 text-slate-300 hover:bg-white/10'}`}
+                      className={`rounded-xl px-4 py-3 text-sm font-semibold transition ${activeTab === tab ? 'bg-accent text-slate-950 shadow-glow' : 'bg-slate-950 text-slate-400 hover:bg-slate-950/10'}`}
                     >
                       {tab}
                     </button>
                   ))}
                 </div>
-                <div className="space-y-4 rounded-[32px] border border-white/10 bg-slate-950/80 p-5">
+                <div className="space-y-4 rounded-2xl border border-slate-700 bg-slate-950 p-5">
                   <div className="grid gap-3 sm:grid-cols-3">
                     <input
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                       placeholder="Search location, city, or property"
-                      className="rounded-3xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white outline-none"
+                      className="rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white outline-none"
                     />
                     <select
                       value={filters.type}
                       onChange={(e) => setFilters((prev) => ({ ...prev, type: e.target.value }))}
-                      className="rounded-3xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none"
+                      className="rounded-xl border border-slate-300 bg-slate-950 px-4 py-3 text-white outline-none"
                     >
                       <option value="">Type</option>
                       <option value="Residential">Residential</option>
@@ -76,7 +82,7 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
                     <select
                       value={filters.budget}
                       onChange={(e) => setFilters((prev) => ({ ...prev, budget: e.target.value }))}
-                      className="rounded-3xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white outline-none"
+                      className="rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-3 text-white outline-none"
                     >
                       <option value="">Budget</option>
                       <option value="lt5">Below ₹5L</option>
@@ -87,10 +93,10 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
                     </select>
                   </div>
                   <div className="flex flex-wrap gap-3">
-                    <button type="button" className="rounded-3xl bg-white/10 px-5 py-3 text-sm text-white transition hover:bg-white/20">
+                    <button type="button" className="rounded-xl bg-slate-950/10 px-5 py-3 text-sm text-white transition hover:bg-slate-950/20">
                       Advanced filters
                     </button>
-                    <button type="button" className="rounded-3xl border border-white/10 px-5 py-3 text-sm text-white transition hover:border-accent">
+                    <button type="button" className="rounded-xl border border-slate-700 px-5 py-3 text-sm text-white transition hover:border-accent">
                       Check featured
                     </button>
                   </div>
@@ -106,7 +112,7 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
                   <p className="section-heading">Featured properties</p>
                   <h2 className="text-3xl font-semibold text-white">Premium listings selected for you</h2>
                 </div>
-                <Link to="/listings" className="rounded-3xl border border-white/10 px-5 py-3 text-sm text-slate-200 transition hover:border-accent">
+                <Link to="/listings" className="rounded-xl border border-slate-700 px-5 py-3 text-sm text-slate-200 transition hover:border-accent">
                   View All
                 </Link>
               </div>
@@ -118,16 +124,16 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
               </div>
             </section>
 
-            <section className="rounded-[36px] border border-white/10 bg-white/5 p-8 shadow-glass backdrop-blur-xl">
+            <section className="rounded-2xl border border-slate-700 bg-slate-950 p-8 shadow-glass backdrop-blur-xl">
               <div className="grid gap-10 lg:grid-cols-[0.9fr_0.8fr] lg:items-center">
                 <div className="space-y-4">
                   <p className="section-heading">Top cities</p>
                   <h2 className="text-3xl font-semibold text-white">Explore sought-after markets</h2>
-                  <p className="max-w-xl text-slate-300">Search by city and discover premium investment opportunities available right now.</p>
+                  <p className="max-w-xl text-slate-400">Search by city and discover premium investment opportunities available right now.</p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-3">
                   {topCities.map((city) => (
-                    <div key={city} className="rounded-3xl border border-white/10 bg-slate-950/80 p-5 text-center">
+                    <div key={city} className="rounded-xl border border-slate-700 bg-slate-950 p-5 text-center">
                       <p className="text-lg font-semibold text-white">{city}</p>
                       <p className="mt-2 text-sm text-slate-400">Curated luxury listings</p>
                     </div>
@@ -137,54 +143,54 @@ function HomePage({ properties, favorites, toggleFavorite, filters, search, setF
             </section>
 
             <section className="grid gap-8 lg:grid-cols-3">
-              <div className="glass-panel rounded-[32px] p-8">
+              <div className="glass-panel rounded-2xl p-8">
                 <span className="section-heading">Why choose us</span>
                 <h3 className="mt-4 text-2xl font-semibold text-white">A premium experience built for modern property seekers.</h3>
-                <p className="mt-4 text-slate-300">Advanced search, luxury presentation, and seamless contact flows tailored for buyers, renters, and investors.</p>
+                <p className="mt-4 text-slate-400">Advanced search, luxury presentation, and seamless contact flows tailored for buyers, renters, and investors.</p>
               </div>
-              <div className="glass-panel rounded-[32px] p-8">
+              <div className="glass-panel rounded-2xl p-8">
                 <span className="section-heading">Trusted agents</span>
                 <h3 className="mt-4 text-2xl font-semibold text-white">Expert support for every property journey.</h3>
-                <p className="mt-4 text-slate-300">High-touch agent service ensures smooth touring, negotiation, and closing.</p>
+                <p className="mt-4 text-slate-400">High-touch agent service ensures smooth touring, negotiation, and closing.</p>
               </div>
-              <div className="glass-panel rounded-[32px] p-8">
+              <div className="glass-panel rounded-2xl p-8">
                 <span className="section-heading">Fast insights</span>
                 <h3 className="mt-4 text-2xl font-semibold text-white">Instant market visibility, zero distraction.</h3>
-                <p className="mt-4 text-slate-300">Our layout and filters are optimized for speed and clarity so you can make decisions quickly.</p>
+                <p className="mt-4 text-slate-400">Our layout and filters are optimized for speed and clarity so you can make decisions quickly.</p>
               </div>
             </section>
 
-            <section className="rounded-[36px] border border-white/10 bg-slate-950/80 p-8 shadow-glass">
+            <section className="rounded-2xl border border-slate-700 bg-slate-950 p-8 shadow-glass">
               <div className="grid gap-8 lg:grid-cols-[0.95fr_0.7fr] lg:items-center">
                 <div>
                   <p className="section-heading">What clients say</p>
                   <h2 className="text-3xl font-semibold text-white">Trusted by premium buyers across India.</h2>
                 </div>
                 <div className="space-y-4">
-                  <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-6">
-                    <p className="text-slate-300">“MannatSpaces made our executive relocation effortless. The UI felt premium and the search was fast.”</p>
+                  <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-6">
+                    <p className="text-slate-400">“MannatSpaces made our executive relocation effortless. The UI felt premium and the search was fast.”</p>
                     <p className="mt-4 font-semibold text-white">Priya Sharma, Corporate Buyer</p>
                   </div>
-                  <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-6">
-                    <p className="text-slate-300">“The contact flow and property details were modern and very easy to navigate on mobile.”</p>
+                  <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-6">
+                    <p className="text-slate-400">“The contact flow and property details were modern and very easy to navigate on mobile.”</p>
                     <p className="mt-4 font-semibold text-white">Sameer Gupta, Investor</p>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section className="rounded-[36px] border border-white/10 bg-white/5 p-8 shadow-glass">
+            <section className="rounded-2xl border border-slate-700 bg-slate-950 p-8 shadow-glass">
               <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
                 <div>
                   <p className="section-heading">Get started</p>
                   <h2 className="text-3xl font-semibold text-white">Find the right property today.</h2>
-                  <p className="mt-3 text-slate-300">Book a consultation or browse the latest featured addresses on MannatSpaces.</p>
+                  <p className="mt-3 text-slate-400">Book a consultation or browse the latest featured addresses on MannatSpaces.</p>
                 </div>
                 <div className="flex flex-wrap gap-4">
-                  <a href="https://wa.me/918251096645" target="_blank" rel="noreferrer" className="rounded-3xl bg-green-500 px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-green-400">
+                  <a href="https://wa.me/918251096645" target="_blank" rel="noreferrer" className="rounded-xl bg-green-500 px-6 py-4 text-sm font-semibold text-slate-950 transition hover:bg-green-400">
                     Chat on WhatsApp
                   </a>
-                  <a href="tel:+918251096645" className="rounded-3xl border border-white/10 px-6 py-4 text-sm font-semibold text-white transition hover:border-accent">
+                  <a href="tel:+918251096645" className="rounded-xl border border-slate-700 px-6 py-4 text-sm font-semibold text-white transition hover:border-accent">
                     Call now
                   </a>
                 </div>

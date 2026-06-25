@@ -4,21 +4,21 @@
 
 :root {
   color-scheme: dark;
-  font-family: 'Inter', sans-serif;
-  background: #071b35;
-  color: #f8fafc;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(94,152,255,.15), transparent 25%),
-    linear-gradient(180deg,#071b35 0%,#08162f 100%);
+    radial-gradient(circle at top left, rgba(59,130,246,.25), transparent 35%),
+    radial-gradient(circle at top right, rgba(37,99,235,.20), transparent 35%),
+    linear-gradient(180deg,#020617 0%,#071226 50%,#020617 100%);
+  color: #f8fafc;
+  font-family: Inter, sans-serif;
 }
 
 * {
@@ -27,34 +27,30 @@ body {
 
 a {
   color: inherit;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
+  text-decoration: none;
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(229, 231, 235, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(15,23,42,.75);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35),
+    0 0 40px rgba(59,130,246,.08);
 }
 
 .glow-button {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: all .3s ease;
 }
 
 .glow-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(59,130,246,0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(59,130,246,.45);
 }
 
 .section-heading {
-  letter-spacing: 0.2em;
+  color: #60a5fa;
+  letter-spacing: .25em;
   text-transform: uppercase;
-  color: #2563eb;
-  font-weight: 600;
+  font-weight: 700;
 }

@@ -10,10 +10,10 @@ const navItems = [
 
 function Navbar() {
   return (
-     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-2xl">
+     <header className="sticky top-0 z-50 border-b border-slate-700 bg-slate-950/95 backdrop-blur-2xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <NavLink to="/" className="inline-flex items-center gap-3 text-lg font-semibold tracking-[0.14em] text-slate-900">
-          <span className="flex h-12 w-12 items-center justify-center rounded-3xl bg-gradient-to-br from-[#5E98FF] to-[#8CDBFF] text-xl font-black text-slate-950 shadow-[0_20px_60px_rgba(0,121,255,0.16)]">
+        <NavLink to="/" className="inline-flex items-center gap-3 text-lg font-semibold tracking-[0.14em] text-white">
+          <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#5E98FF] to-[#8CDBFF] text-xl font-black text-slate-950 shadow-[0_20px_60px_rgba(0,121,255,0.16)]">
             MS
           </span>
           MannatSpaces
@@ -25,7 +25,7 @@ function Navbar() {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `text-sm font-medium transition ${isActive ? 'text-slate-900' : 'text-slate-300 hover:text-slate-900'}`
+                `text-sm font-medium transition ${isActive ? 'text-white' : 'text-slate-600 hover:text-blue-600'}`
               }
             >
               {item.label}

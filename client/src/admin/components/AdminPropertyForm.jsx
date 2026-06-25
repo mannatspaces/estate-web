@@ -118,49 +118,49 @@ const handleSubmit = (event) => {
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
       <div className="grid gap-4 sm:grid-cols-2">
-        <input value={form.title} onChange={(e) => updateField('title', e.target.value)} placeholder="Property title" className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
-        <input value={form.location} onChange={(e) => updateField('location', e.target.value)} placeholder="City or area" className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
+        <input value={form.title} onChange={(e) => updateField('title', e.target.value)} placeholder="Property title" className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
+        <input value={form.location} onChange={(e) => updateField('location', e.target.value)} placeholder="City or area" className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <input value={form.neighborhood} onChange={(e) => updateField('neighborhood', e.target.value)} placeholder="Neighborhood" className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
-        <select value={form.type} onChange={(e) => updateField('type', e.target.value)} className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none">
+        <input value={form.neighborhood} onChange={(e) => updateField('neighborhood', e.target.value)} placeholder="Neighborhood" className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
+        <select value={form.type} onChange={(e) => updateField('type', e.target.value)} className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none">
           <option value="Residential">Residential</option>
           <option value="Commercial">Commercial</option>
           <option value="Plot">Plot</option>
         </select>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <input value={form.price} onChange={(e) => updateField('price', e.target.value)} type="number" placeholder="Price (₹)" className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
-        <input value={form.area} onChange={(e) => updateField('area', e.target.value)} type="number" placeholder="Area (sqft)" className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
+        <input value={form.price} onChange={(e) => updateField('price', e.target.value)} type="number" placeholder="Price (₹)" className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
+        <input value={form.area} onChange={(e) => updateField('area', e.target.value)} type="number" placeholder="Area (sqft)" className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <select value={form.status} onChange={(e) => updateField('status', e.target.value)} className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none">
+        <select value={form.status} onChange={(e) => updateField('status', e.target.value)} className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none">
           <option value="For Sale">For Sale</option>
           <option value="For Lease">For Lease</option>
         </select>
-        <select value={form.tag} onChange={(e) => updateField('tag', e.target.value)} className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none">
+        <select value={form.tag} onChange={(e) => updateField('tag', e.target.value)} className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none">
           <option value="Featured">Featured</option>
           <option value="Luxury">Luxury</option>
           <option value="Elite">Elite</option>
         </select>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <input value={form.agentName} onChange={(e) => updateField('agentName', e.target.value)} placeholder="Agent name" className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
-        <input value={form.agentPhone} onChange={(e) => updateField('agentPhone', e.target.value)} placeholder="Agent phone" className="rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
+        <input value={form.agentName} onChange={(e) => updateField('agentName', e.target.value)} placeholder="Agent name" className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
+        <input value={form.agentPhone} onChange={(e) => updateField('agentPhone', e.target.value)} placeholder="Agent phone" className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
       </div>
-      <textarea value={form.description} onChange={(e) => updateField('description', e.target.value)} rows="4" placeholder="Property description" className="w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
+      <textarea value={form.description} onChange={(e) => updateField('description', e.target.value)} rows="4" placeholder="Property description" className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
       <div className="space-y-2">
         <label className="text-sm text-slate-400">Upload listing photos</label>
-        <input type="file" accept="image/*" multiple onChange={handleImageUpload} className="w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none" />
+        <input type="file" accept="image/*" multiple onChange={handleImageUpload} className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none" />
       </div>
       <div className="flex flex-wrap gap-3">
         {form.gallery.map((item, index) => (
-          <img key={index} src={item} alt={`Preview ${index + 1}`} className="h-20 w-28 rounded-3xl object-cover" />
+          <img key={index} src={item} alt={`Preview ${index + 1}`} className="h-20 w-28 rounded-xl object-cover" />
         ))}
       </div>
       <div className="flex items-center gap-3">
-        <button type="submit" className="rounded-3xl bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-accent2">Save Listing</button>
-        <button type="button" onClick={onCancel} className="rounded-3xl border border-white/10 bg-slate-950/70 px-5 py-3 text-sm text-slate-200 transition hover:border-slate-200">Cancel</button>
+        <button type="submit" className="rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-accent2">Save Listing</button>
+        <button type="button" onClick={onCancel} className="rounded-xl border border-slate-700 bg-slate-950/70 px-5 py-3 text-sm text-slate-200 transition hover:border-slate-700">Cancel</button>
       </div>
     </form>
   );
